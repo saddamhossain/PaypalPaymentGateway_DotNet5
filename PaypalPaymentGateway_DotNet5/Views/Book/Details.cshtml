@@ -1,0 +1,19 @@
+﻿@model PaypalPaymentGateway_DotNet5.Models.Book
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Title <small class="text-muted">(by: @Model.Author) </small> </h5> <br />
+            <p class="card-text">@Model.Description </p>
+        </div>
+        <img class="card-img-bottom" src="@Model.Thumbnail" width="130" height="650" alt="Card Image caption" />
+    </div>
+
+    <div>
+        <a asp-action="Index" asp-controller="Book" class="btn btn-primary"> Back to List </a>
+    </div>
+</div>
